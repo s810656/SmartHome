@@ -7,6 +7,7 @@ void setup()
 }
 void loop()
 {
+  Serial.println("alert");
   if(digitalRead(2)==HIGH) {
   digitalWrite(12, HIGH);
   digitalWrite(11, LOW);
@@ -18,7 +19,9 @@ void loop()
   delay(500);
   }
   else {
+  Serial.println("normal");
   digitalWrite(12, LOW);
   digitalWrite(11, LOW);
+  delay(1000);
   }
 }
